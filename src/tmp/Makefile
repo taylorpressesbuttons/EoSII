@@ -4,15 +4,15 @@ OPTOMIZ = -O2
 DEBUG   = -g3
 WARN    = -Wall
 #C_FLAGS = $(PROF) $(OPTOMIZ) $(WARN) $(DEBUG)
-C_FLAGS = -c -O -Wall -g3
-L_FLAGS = -lcrypt -static -g
+C_FLAGS = -c -O -Wall -g3 -Wno-format-truncation
+L_FLAGS = -g
 SYSTEM  =
 
 O_FILES = act_comm.o act_info.o act_move.o act_obj.o act_wiz.o comm.o const.o \
           db.o fight.o handler.o magic.o save.o special.o update.o \
           bit.o mem.o olc.o olc_act.o olc_save.o string.o mob_commands.o \
           mob_prog.o gr_magic.o id.o chat_new.o interp.o\
-	  chat_act.o ore_prog.o quest.o raceskill.o act_room.o track.o
+	  chat_act.o ore_prog.o quest.o raceskill.o act_room.o track.o scan.o
 
 envy: $(O_FILES)
 #	@echo "."

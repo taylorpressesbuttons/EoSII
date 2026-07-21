@@ -1,0 +1,21 @@
+# Generated maps
+/maps/
+
+# Build artifacts
+*.o
+envy
+envy.exe
+nohup.out
+
+# macOS / editor cruft
+.DS_Store
+*.xcuserstate
+**/xcuserdata/
+
+# Logs (comm logs, etc.)
+comlog*
+
+# Player save data: keep the empty a-z directory skeleton, ignore actual saves
+/player/*/*
+!/player/*/.gitkeep
+/player/.DS_Store

@@ -335,6 +335,7 @@ bool mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
                     else
                         return -1;
                 }
+            /* fall through */
             case 't':
                 if (vict)
                 {
@@ -347,6 +348,7 @@ bool mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
                     else
                         return -1;
                 }
+            /* fall through */
             case 'r':
                 if (rndm)
                 {
@@ -359,6 +361,7 @@ bool mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
                     else
                         return -1;
                 }
+            /* fall through */
             default:
                 sprintf(log_buf, "Mob: %d bad arg to ifchck 'isclan' (%s)", mob->pIndexData->vnum,
                         arg);
@@ -1184,6 +1187,7 @@ bool mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
                 }
                 else
                     return -1;
+            /* fall through */
             case 't':
                 if (vict)
                 {
@@ -1196,6 +1200,7 @@ bool mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
                 }
                 else
                     return -1;
+            /* fall through */
             case 'r':
                 if (rndm)
                 {
@@ -1208,6 +1213,7 @@ bool mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
                 }
                 else
                     return -1;
+            /* fall through */
             case 'o':
                 if (obj)
                 {
@@ -1288,6 +1294,7 @@ bool mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
                         else
                             return -1;
                     }
+            /* fall through */
             case 't':
                 if (vict)
                     if (!IS_NPC(vict))
@@ -1297,6 +1304,7 @@ bool mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
                         else
                             return -1;
                     }
+            /* fall through */
             case 'r':
                 if (rndm)
                     if (!IS_NPC(rndm))
@@ -1306,6 +1314,7 @@ bool mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
                         else
                             return -1;
                     }
+            /* fall through */
             default:
                 bug("Mob: %d bad argument to 'Lname'", mob->pIndexData->vnum);
                 return -1;
@@ -1887,11 +1896,11 @@ void mprog_wordlist_check(char *arg, CHAR_DATA *mob, CHAR_DATA *actor,
         {
             strcpy(temp1, mprg->arglist);
             list = temp1;
-            for (i = 0; i < strlen(list); i++)
+            for (i = 0; i < (int)strlen(list); i++)
                 list[i] = LOWER(list[i]);
             strcpy(temp2, arg);
             dupl = temp2;
-            for (i = 0; i < strlen(dupl); i++)
+            for (i = 0; i < (int)strlen(dupl); i++)
                 dupl[i] = LOWER(dupl[i]);
             if ((list[0] == 'p') && (list[1] == ' '))
             {

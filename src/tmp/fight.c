@@ -2419,7 +2419,7 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
     {
         if (is_sn(dt))
             attack = skill_table[dt].noun_damage;
-        else if (dt >= TYPE_HIT && dt < TYPE_HIT + sizeof(attack_table) / sizeof(attack_table[0]))
+        else if (dt >= TYPE_HIT && dt < TYPE_HIT + (int)(sizeof(attack_table) / sizeof(attack_table[0])))
             attack = attack_table[dt - TYPE_HIT];
         else
         {
@@ -5526,10 +5526,13 @@ void death_xp_loss(CHAR_DATA *victim)
         {
             case LEVEL_HERO:
                 mod = 1;
+                break;
             case L_CHAMP1:
                 mod = 4;
+                break;
             case L_CHAMP2:
                 mod = 10;
+                break;
         }
         xp_lastlvl = xp_lastlvl * mod;
         if (victim->exp > xp_lastlvl)

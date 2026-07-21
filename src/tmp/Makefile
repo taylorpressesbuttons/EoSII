@@ -4,7 +4,7 @@ OPTOMIZ = -O2
 DEBUG   = -g3
 WARN    = -Wall
 #C_FLAGS = $(PROF) $(OPTOMIZ) $(WARN) $(DEBUG)
-C_FLAGS = -c -O -Wall -g3 -Wno-format-truncation
+C_FLAGS = -c -O -Wall -Wextra -Wno-unused-parameter -g3 -Wno-format-truncation
 L_FLAGS = -g
 SYSTEM  =
 

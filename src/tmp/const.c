@@ -7385,6 +7385,7 @@ const struct skill_type skill_table[MAX_SKILL] =
          "thunder strike",
          "!thunder strike!",
          "",
+         FALSE,
          SLOT(0)},
 
         {"inspiration",
@@ -7414,6 +7415,7 @@ const struct skill_type skill_table[MAX_SKILL] =
          "war cry",
          "!War cry!",
          "",
+         FALSE,
          SLOT(0)},
 
         {"group healing",
@@ -7582,6 +7584,7 @@ const struct skill_type skill_table[MAX_SKILL] =
             "",
             "",
             "",
+            FALSE,
             SLOT(0)}};
 
 const struct gskill_type gskill_table[MAX_GSPELL] =

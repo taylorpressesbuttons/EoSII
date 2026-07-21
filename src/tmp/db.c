@@ -3522,7 +3522,7 @@ char *fread_string(FILE *fp)
                     iHash = UMIN(MAX_KEY_HASH - 1, plast - 1 - top_string);
                     for (pHash = string_hash[iHash]; pHash; pHash = pHashPrev)
                     {
-                        for (ic = 0; ic < sizeof(char *); ic++)
+                        for (ic = 0; ic < (int)sizeof(char *); ic++)
                             u1.rgc[ic] = pHash[ic];
                         pHashPrev = u1.pc;
                         pHash += sizeof(char *);
@@ -3536,7 +3536,7 @@ char *fread_string(FILE *fp)
                         pString = top_string;
                         top_string = plast;
                         u1.pc = string_hash[iHash];
-                        for (ic = 0; ic < sizeof(char *); ic++)
+                        for (ic = 0; ic < (int)sizeof(char *); ic++)
                             pString[ic] = u1.rgc[ic];
                         string_hash[iHash] = pString;
 
@@ -3639,7 +3639,6 @@ void *new_mem(int sMem, int isperm)
     static bool Killit;
     static bool Already;
 
-    isperm = 0;
     if (!(pMem = calloc(1, sMem)) ||
         ((sAllocPerm / (1024 * 1024)) > 512 && !Killit))
     {

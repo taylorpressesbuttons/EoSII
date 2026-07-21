@@ -217,7 +217,7 @@ void send_auth(struct auth_data *auth)
     z = write(auth->auth_fd, authbuf, strlen(authbuf));
     /*  if ( errno == ECONNREFUSED )
     END_AUTH(auth, "(no identd)"); */
-    if (z != strlen(authbuf))
+    if (z != (int)strlen(authbuf))
     {
         if (auth->atimes == 1)
         {

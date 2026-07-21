@@ -1240,7 +1240,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 
     /* Check for overflow. */
     iStart = strlen(d->inbuf);
-    if (iStart >= sizeof(d->inbuf) - 10)
+    if (iStart >= (int)(sizeof(d->inbuf) - 10))
     {
         sprintf(log_buf, "%s input overflow!", d->host);
         log_string(log_buf, CHANNEL_GOD, -1);
@@ -3928,7 +3928,7 @@ bool imc_read(void)
     static int iStart;
     static char buf[MAX_STRING_LENGTH];
 
-    if (iStart >= sizeof(buf) - 10)
+    if (iStart >= (int)(sizeof(buf) - 10))
     {
         log_string("imc overflow", CHANNEL_GOD, -1);
         iStart = 0;
@@ -3980,7 +3980,7 @@ bool imc_write(const char *txt)
         imc_channel(txt, nBlock);
         if (imcdesc < 0)
             return TRUE;
-        if (btop + nBlock >= sizeof(buf) - 10)
+        if (btop + nBlock >= (int)(sizeof(buf) - 10))
         {
             log_string("imc output overflow", CHANNEL_GOD, -1);
             btop = 0;

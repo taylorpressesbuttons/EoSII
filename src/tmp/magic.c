@@ -1314,7 +1314,7 @@ void spell_burning_hands(int sn, int level, CHAR_DATA *ch, void *vo)
             56, 56, 56, 56, 56, 57, 57, 58, 59, 60};
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
     dam = sc_dam(ch, dam);
@@ -1466,7 +1466,7 @@ void spell_chill_touch(int sn, int level, CHAR_DATA *ch, void *vo)
             39, 39, 39, 40, 40, 40, 41, 41, 42, 43};
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
     dam = sc_dam(ch, dam);
@@ -1508,7 +1508,7 @@ void spell_colour_spray(int sn, int level, CHAR_DATA *ch, void *vo)
 
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
     dam = sc_dam(ch, dam);
@@ -2440,7 +2440,7 @@ void spell_fireball(int sn, int level, CHAR_DATA *ch, void *vo)
             215, 220, 225, 230, 235, 240, 245, 250, 255, 260};
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 7);
     dam = sc_dam(ch, dam);
@@ -3279,7 +3279,7 @@ void spell_lightning_bolt(int sn, int level, CHAR_DATA *ch, void *vo)
             150, 152, 154, 156, 158, 160, 162, 164, 166, 170};
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
     dam = sc_dam(ch, dam);
@@ -3359,7 +3359,7 @@ void spell_magic_missile(int sn, int level, CHAR_DATA *ch, void *vo)
             28, 28, 28, 28, 28, 30, 31, 32, 33, 40};
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
     dam = sc_dam(ch, dam);
@@ -4130,7 +4130,7 @@ void spell_shocking_grasp(int sn, int level, CHAR_DATA *ch, void *vo)
             97, 98, 99, 100, 101, 102, 103, 104, 105, 106};
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
     dam = sc_dam(ch, dam);
@@ -4684,7 +4684,7 @@ void spell_agitation(int sn, int level, CHAR_DATA *ch, void *vo)
             78, 79, 80, 81, 82, 83, 84, 85, 86, 87};
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
     dam = sc_dam(ch, dam);
@@ -4752,7 +4752,7 @@ void spell_ballistic_attack(int sn, int level, CHAR_DATA *ch, void *vo)
             61, 62, 63, 64, 65, 66, 67, 68, 69, 70};
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
     dam = sc_dam(ch, dam);
@@ -4954,7 +4954,7 @@ void spell_control_flames(int sn, int level, CHAR_DATA *ch, void *vo)
         return;
     }
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
     dam = sc_dam(ch, dam);
@@ -5617,7 +5617,7 @@ void spell_psionic_blast(int sn, int level, CHAR_DATA *ch, void *vo)
             222, 224, 226, 228, 230, 232, 234, 236, 238, 240};
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level]);
     dam = sc_dam(ch, dam);
@@ -7246,7 +7246,7 @@ void spell_stench_of_decay(int sn, int level, CHAR_DATA *ch, void *vo)
             215, 220, 225, 230, 235, 240, 245, 250, 255, 260};
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level] / 2, dam_each[level] * 7);
     dam = sc_dam(ch, dam);
@@ -7377,7 +7377,7 @@ void spell_thunder_strike(int sn, int level, CHAR_DATA *ch, void *vo)
 
     int dam;
 
-    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
+    level = UMIN(level, (int)(sizeof(dam_each) / sizeof(dam_each[0]) - 1));
     level = UMAX(0, level);
     dam = number_range(dam_each[level], dam_each[level] * 8);
     dam = sc_dam(ch, dam);

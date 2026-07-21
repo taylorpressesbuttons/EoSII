@@ -127,11 +127,11 @@ bool tprog_wordlist_check(char *arg, CHAR_DATA *actor, OBJ_DATA *obj,
         {
             strcpy(temp1, tprg->arglist);
             list = temp1;
-            for (i = 0; i < strlen(list); i++)
+            for (i = 0; i < (int)strlen(list); i++)
                 list[i] = LOWER(list[i]);
             strcpy(temp2, arg);
             dupl = temp2;
-            for (i = 0; i < strlen(dupl); i++)
+            for (i = 0; i < (int)strlen(dupl); i++)
                 dupl[i] = LOWER(dupl[i]);
             if ((list[0] == 'p') && (list[1] == ' '))
             {
